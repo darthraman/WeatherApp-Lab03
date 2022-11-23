@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController,CLLocationManagerDelegate {
+class ViewController: UIViewController,CLLocationManagerDelegate,UITextFieldDelegate {
 
     @IBOutlet weak var searchTextField: UITextField!
     
@@ -39,7 +39,16 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
        displaySampleImageForDemo(code: -1)
         locationManager.delegate = self
         loadWeatherCondition()
+        
+        self.searchTextField.delegate = self
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchText = searchTextField.text!
+
+        loadWeather(search: searchText)
+            return true
+        }
    
     
     private func displaySampleImageForDemo(code: Int) {
