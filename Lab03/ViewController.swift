@@ -344,6 +344,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITextFieldDele
         }
     
     
+    
+    @IBAction func onAddLocationTapped(_ sender: Any) {
+        print("hello")
+    }
+    
     func loadWeatherCondition() {
             guard let url = URL(string: "https://www.weatherapi.com/docs/weather_conditions.json") else {
                 print("Invalid URL")

@@ -85,6 +85,18 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJb-p0-qJB">
+                                <rect key="frame" x="16" y="774" width="361" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Pup-Ta-ftJ"/>
+                                    <barButtonItem title="Add Location" id="zVU-ho-xac">
+                                        <connections>
+                                            <action selector="onAddLocationTapped:" destination="BYZ-38-t0r" id="URH-2q-U92"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
